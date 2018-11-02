@@ -8,21 +8,30 @@
 
 You might be familiar with how to model a dice-throwing game using
 procedural-style code. You might have implemented methods like `throw_die` or
-`throw_dice(4)` to get a collection of 4 rolls.
+`generate_set` to get a collection of 4 individual die rolls.
 
 In this lesson, we're going to implement the same ideas: `Die` and
-`DieRoller`, but from an Object-Oriented perspective.
+`DieRoller`, but from an Object-Oriented perspective. We want to show
+how Object-Oriented programming is only a different _style_ of programming.
+
+Instead of thinking in **verbs** (`throw_die`, `generate_set`) that
+return **nouns**, we want to think in terms of **nouns** that do things
+(**verbs**). It's a shift in style of thinking. Both "I
+ate the cake" or "The cake was eaten by me" communicate that the cake
+is gone and in your belly, but there's a subtle stylistic difference
+("active voice" versus "passive voice").
 
 ## Create Object Oriented Dice Thrower Application
 
 * Create a `Die` class
-  * By default, it should have six "pips" (pip is the technical word for the
+  * It should be initializable with a "pip" count. A "pip" is the "dot" on the side of a die. The pip count you initialize a Die with is the largest number the die can create.
+  * If it is initialized without a pip count, it should default to 6 (a classic, cubical die)
     dots on the side of the die)
-  * `pips` should be accessible via `attr_reader`
-  * `roll` should be a method on `Die` which returns a random pip value
+  * `max_pips` should be accessible via `attr_reader`
+  * `roll` should be a method on `Die` which returns a random pip value. The `Die` knows its own `max_pips` so we can expect this `Number` to be between 1 and `max_pips`
 * Create a `DiceRoller` class
-  * By default it should initialize with a set of 1 `Die`
-  * It should be configurable to initialize with multiple dice
+  * It should be initializable with a number of die count 
+  * By default it should initialize with a set of 1 instance of `Die`
   * The `generate_set` method should return an `Array` of the initialized number
     of dice
 
