@@ -24,15 +24,19 @@ is gone and in your belly, but there's a subtle stylistic difference
 ## Create Object Oriented Dice Thrower Application
 
 * Create a `Die` class
-  * It should be initializable with a "pip" count. A "pip" is the "dot" on the side of a die. The pip count you initialize a Die with is the largest number the die can create.
+  * Initialization
+    * It should be initializable with a maximum "pips" count. A "pip" is the "dot" on the side of a die. The pip count you initialize a `Die` with is the largest number the `Die` can create.
   * If it is initialized without a pip count, it should default to 6 (a classic, cubical die)
-    dots on the side of the die)
-  * `max_pips` should be accessible via `attr_reader`
-  * `roll` should be a method on `Die` which returns a random pip value. The `Die` knows its own `max_pips` so we can expect this `Number` to be between 1 and `max_pips`
+  * Attributes
+    * `max_pips` should be accessible via `attr_reader`
+  * Methods
+    * `roll` should be a method on `Die` which returns a random pip value. The `Die` knows its own `max_pips` so we can expect this `Number` to be between 1 and `max_pips`
 * Create a `DiceRoller` class
-  * It should be initializable with a number of die count 
-  * By default it should initialize with a set of 1 instance of `Die`
-  * The `generate_set` method should return an `Array` of the initialized number
+  * Initialization
+    * It should be initializable with a number of dice
+    * By default it should initialize with a set of 1 instance of `Die`
+  * Methods
+    * The `generate_set` method should return an `Array` of the initialized number
     of dice
 
 ## Conclusion
