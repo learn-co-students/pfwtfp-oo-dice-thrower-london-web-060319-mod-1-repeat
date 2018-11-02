@@ -33,6 +33,6 @@ reusable and maintainable code. This is a constant pattern in Object-Oriented
 development: build a class that represents a single thing (`Die`, `Burrito`,
 `Car`) and then build _another_ class that wraps a collection of those single
 things (`Dice`, `LunchOrder`, `StatusOfFreeway`) and offers insights about
-those collections (`total_of_roll`, `likely_to_cause_heartburn`, `rush_hour?`)
+those collections (`total_of_roll`, `likely_to_cause_heartburn?`, `rush_hour?`)
 
 [settlers of catan]: https://www.catan.com/
