@@ -1,4 +1,4 @@
-# Advanced Dice Thrower
+# Object-Oriented Dice Thrower
 
 ## Learning Goals
 
