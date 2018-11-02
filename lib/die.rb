@@ -1,12 +1,12 @@
 class Die
   # The number of dots on a die are called "pips"
-  attr_reader :pips
+  attr_reader :max_pips
 
-  def initialize(pips=6)
-    @pips = pips
+  def initialize(max_pips=6)
+    @max_pips = max_pips
   end
 
   def roll
-    rand(pips) + 1
+    rand(max_pips) + 1
   end
 end
