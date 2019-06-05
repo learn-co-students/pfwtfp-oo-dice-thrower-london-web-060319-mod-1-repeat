@@ -38,7 +38,7 @@ describe 'DieRoller' do
 
   it "is initialized with die count of 2, with pips set to 4 sums to 8"  do
     dr = DiceRoller.new(2, 4)
-    expect(dr.dice.map(&:max_pips).reduce(&:+)).to eq(8)
+    expect(dr.dice.map(&:pips).reduce(&:+)).to eq(8)
   end
 
   context "#generate_set" do
